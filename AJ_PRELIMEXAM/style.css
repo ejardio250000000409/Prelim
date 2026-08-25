@@ -65,3 +65,18 @@ body {
   color: #F2C94C;
 }
 
+
+/* Grouped Section Borders & Backgrounds */
+.hero-section,
+.programs-section,
+.matrix-section,
+.specs-section,
+.table-section,
+.form-section {
+  border-bottom: 1px solid #262626;
+}
+
+.programs-section,
+.main-footer {
+  background-color: #161616;
+}
