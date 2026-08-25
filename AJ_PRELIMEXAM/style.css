@@ -80,3 +80,25 @@ body {
 .main-footer {
   background-color: #161616;
 }
+
+.program-card,
+.specs-table,
+.form-wrapper,
+.btn {
+  background-color: #1e1e1e;
+}
+
+.card-title,
+.bold-text,
+.specs-table td:first-child,
+.form-group label {
+  color: #FBE28D;
+  font-weight: 700;
+}
+
+/* Section Containers & Typography */
+.hero-section {
+  text-align: center;
+  padding: 50px 20px 40px;
+}
+
