@@ -49,3 +49,19 @@ body {
   gap: 24px;
 }
 
+.nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active,
+.hero-title .highlight-text,
+.highlight-text,
+.specs-table th {
+  color: #F2C94C;
+}
+
