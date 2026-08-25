@@ -36,3 +36,16 @@ body {
   color: #ffffff;
   text-decoration: none;
 }
+
+.logo .highlight,
+.section-title,
+.btn {
+  color: #F59B14;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+}
+
