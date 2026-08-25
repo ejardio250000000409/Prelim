@@ -1,143 +1,143 @@
 /*Abarquez and Jardio Prelim Exam*/
 
-*{
+/* ==========================================================================
+   Header Information
+   ==========================================================================
+   Course: CS008.23 - Web Applications Development 1
+   Task: Preliminary Practical Examination - Single Page Landing Page
+   
+   Official PRD Color Tokens:
+   - Solid Background: #121212
+   - Primary Accent:   #F59B14
+   - Highlight Text:   #F2C94C
+   - Pastel Cream:     #FBE28D
+*/
+
+/* ==========================================================================
+   1. Base Styles & Global Resets
+   ========================================================================== */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 body {
-    background-color: #121212;
-      color: #9ca3af;
-      line-height: 1.5;
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #c5c5c5;
+  line-height: 1.6;
 }
 
-/* Header & Navigation */
+/* Base Utility Classes */
+.highlight {
+  color: #F59B14;
+}
+
+/* Handles both .highlight-text and .highlight- text from HTML */
+.highlight-text,
+[class*="highlight-"] {
+  color: #F2C94C;
+}
+
+.section-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+.section-title {
+  color: #F59B14;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 1.35rem;
+  font-weight: bold;
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+/* ==========================================================================
+   2. Header & Navigation Section
+   ========================================================================== */
 .main-header {
   background-color: #1a1a1a;
-  padding: 18px 0;
   border-bottom: 2px solid #F59B14;
+  padding: 15px 0;
 }
 
 .header-container {
-    max-width: 960px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 20px;
 }
 
 .logo {
-  font-weight: 800;
-  font-size: 1.15rem;
-  letter-spacing: 0.5px;
+  font-size: 1.4rem;
+  font-weight: bold;
   color: #ffffff;
   text-decoration: none;
-}
-
-.logo .highlight,
-.section-title,
-.btn {
-  color: #F59B14;
+  letter-spacing: 0.5px;
 }
 
 .nav-list {
   display: flex;
   list-style: none;
-  gap: 24px;
+  gap: 20px;
 }
 
+/* Inactive Nav Links (e.g., "About CCS") */
 .nav-link {
-  color: #ffffff;
+  color: #d1d5db;
   text-decoration: none;
   font-size: 0.85rem;
-  font-weight: 600;
+  font-weight: bold;
   transition: color 0.2s ease;
 }
 
-.nav-link:hover,
+/* Active Nav Link (e.g., "Home") & Hover State */
 .nav-link.active,
-.hero-title .highlight-text,
-.highlight-text,
-.specs-table th {
-  color: #F2C94C;
+.nav-link:hover {
+  color: #FBE28D; /* PRD Pastel Cream Text */
 }
 
-
-/* Grouped Section Borders & Backgrounds */
-.hero-section,
-.programs-section,
-.matrix-section,
-.specs-section,
-.table-section,
-.form-section {
-  border-bottom: 1px solid #262626;
-}
-
-.programs-section,
-.main-footer {
-  background-color: #161616;
-}
-
-.program-card,
-.specs-table,
-.form-wrapper,
-.btn {
-  background-color: #1e1e1e;
-}
-
-.card-title,
-.bold-text,
-.specs-table td:first-child,
-.form-group label {
-  color: #FBE28D;
-  font-weight: 700;
-}
-
-/* Section Containers & Typography */
+/* ==========================================================================
+   3. Hero Section
+   ========================================================================== */
 .hero-section {
-  text-align: center;
-  padding: 50px 20px 40px;
+  padding: 50px 20px 20px 20px;
 }
 
 .hero-container {
-  max-width: 650px;
+  max-width: 800px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .hero-title {
-  font-size: 2.1rem;
+  font-size: 2.3rem;
+  font-weight: bold;
   color: #ffffff;
-  margin-bottom: 16px;
-  font-weight: 700;
+  margin-bottom: 15px;
 }
 
-.hero-subtitle,
-.card-desc {
-  font-size: 0.85rem;
-  color: #9ca3af;
-  line-height: 1.6;
-}
-
-
-.section-container {
-  max-width: 960px;
+.hero-subtitle {
+  max-width: 680px;
   margin: 0 auto;
-  padding: 40px 20px;
+  color: #a0a0a0;
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
 
-.section-title {
-  font-size: 1.05rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  text-align: center;
-  margin-bottom: 30px;
-  font-weight: 700;
+/* ==========================================================================
+   4. Academic Programs Section (Partner A)
+   ========================================================================== */
+.programs-section {
+  padding-top: 20px;
 }
 
-/* Grids & Cards */
 .programs-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -145,111 +145,135 @@ body {
 }
 
 .program-card {
-  padding: 24px 20px;
+  background-color: #1e1e1e;
   border-radius: 6px;
+  padding: 25px 20px;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
 .card-title {
-  font-size: 0.95rem;
-  margin-bottom: 12px;
+  color: #FBE28D;
+  font-size: 1.05rem;
+  font-weight: bold;
+  margin-bottom: 15px;
   line-height: 1.3;
 }
 
 .card-desc {
-  font-size: 0.78rem;
+  font-size: 0.82rem;
+  color: #a0a0a0;
   line-height: 1.5;
 }
 
-/* Table Section */
+/* ==========================================================================
+   5. Specifications Matrix Table Section (Partner B)
+   ========================================================================== */
 .table-wrapper {
   overflow-x: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
   border-radius: 6px;
-}
-
-.table-section {
-  padding-bottom: 24px;
-  margin-bottom: 24px;
 }
 
 .specs-table {
   width: 100%;
   border-collapse: collapse;
+  background-color: #1e1e1e;
   text-align: left;
 }
 
 .specs-table th {
-  background-color: #222222;
-  font-weight: 700;
+  background-color: #252525;
+  color: #F59B14;
   text-transform: uppercase;
-  font-size: 0.75rem;
+  font-size: 0.78rem;
+  font-weight: bold;
   letter-spacing: 0.5px;
-  padding: 16px 20px;
-  border-bottom: 1px solid #333333;
+  padding: 15px 20px;
+  border-bottom: 1px solid #2a2a2a;
 }
 
 .specs-table td {
-  padding: 16px 20px;
-  font-size: 0.8rem;
-  color: #d1d5db;
-  border-bottom: 1px solid #282828;
+  padding: 15px 20px;
+  border-top: 1px solid #2a2a2a;
+  font-size: 0.82rem;
+  color: #cccccc;
 }
 
-.specs-table tbody tr:last-child td {
-  border-bottom: none;
+.specs-table .bold-text {
+  color: #FBE28D;
+  font-weight: bold;
+  width: 18%;
 }
 
-/* Form Section */
-.form-section .section-container {
-  display: flex;
-  justify-content: center;
-}
-
+/* ==========================================================================
+   6. Inquiry Form Section (Partner B)
+   ========================================================================== */
 .form-wrapper {
-  width: 100%;
-  max-width: 440px;
-  padding: 30px;
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #1e1e1e;
+  padding: 35px 30px;
   border-radius: 6px;
   border-top: 3px solid #F59B14;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
-.inquiry-form,
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
+.form-wrapper .section-title {
+  margin-bottom: 25px;
+  font-size: 1.25rem;
+}
+
+.inquiry-form {
+  text-align: left;
 }
 
 .form-group {
-  gap: 8px;
+  margin-bottom: 20px;
 }
 
 .form-group label {
+  display: block;
+  color: #FBE28D;
   font-size: 0.8rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  cursor: pointer;
 }
 
 .form-group input,
 .form-group select {
   width: 100%;
   padding: 10px 12px;
-  background-color: #141414;
-  border: 1px solid #2a2a2a;
+  background-color: #121212;
+  border: 1px solid #333333;
   border-radius: 4px;
-  color: #6b7280;
-  font-size: 0.8rem;
+  color: #ffffff;
+  font-size: 0.85rem;
   outline: none;
+  transition: border-color 0.2s ease;
 }
 
+.form-group input::placeholder {
+  color: #555555;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #F59B14;
+}
 
 .btn {
+  background-color: transparent;
+  color: #F59B14;
   border: 1px solid #F59B14;
-  padding: 8px 16px;
+  padding: 9px 18px;
   border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: bold;
   cursor: pointer;
-  font-size: 0.75rem;
-  font-weight: 700;
-  align-self: flex-start;
-  margin-top: 5px;
   transition: all 0.2s ease;
+  margin-top: 5px;
 }
 
 .btn:hover {
@@ -257,49 +281,25 @@ body {
   color: #121212;
 }
 
-/* Footer Section */
+/* ==========================================================================
+   7. Footer Section
+   ========================================================================== */
 .main-footer {
+  background-color: #121212;
+  padding: 25px 0;
   text-align: center;
-  padding: 40px 20px 30px;
+  border-top: 1px solid #1f1f1f;
+  margin-top: 20px;
 }
 
 .footer-container p {
-  font-size: 0.7rem;
-  color: #6b7280;
-  max-width: 800px;
-  margin: 0 auto;
-  line-height: 1.5;
+  font-size: 0.72rem;
+  color: #666666;
 }
 
-/* Responsive */
+/* Responsive Fallback */
 @media (max-width: 768px) {
-  .header-container {
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .nav-list {
-    gap: 16px;
-  }
-
-  .hero-title {
-    font-size: 1.6rem;
-  }
-
   .programs-grid {
     grid-template-columns: 1fr;
-  }
-
-  .section-container {
-    padding: 30px 16px;
-  }
-
-  .form-wrapper {
-    padding: 20px;
-  }
-
-  .specs-table th,
-  .specs-table td {
-    padding: 12px 14px;
   }
 }
